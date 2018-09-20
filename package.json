@@ -1,0 +1,15 @@
+{
+  "name": "orange-robe-tours-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/Users/a9889589/Google Drive/Shared/Orange Robe Tours/orange-robe-tours-site-repo/orange-robe-tours-site.git/"
+  },
+  "author": "",
+  "license": "ISC"
+}
