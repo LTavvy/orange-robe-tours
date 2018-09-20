@@ -1,0 +1,31 @@
+@import 'node_modules/bootstrap/scss/bootstrap-reboot';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+
+html {
+  height: 100%;
+}
+
+body {
+  background: white;
+}
+
+header {
+  background: blue;
+}
+
+main {
+  background: green;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.height-100vh {
+  height: 100vh;
+  background: white;
+}
+
+.height-100vh:nth-child(odd) {
+  background: rgba(248, 186, 53, 0.9);
+}
