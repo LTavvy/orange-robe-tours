@@ -4,12 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/main.min.css dist/main.css",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/main.scss dist/main.css",
+    "build": "npm run css-compile",
+    "watch-css": "nodemon --watch src/ --ext scss --exec \"npm run build\"",
+    "watch": "npm run watch-css",
+    "start:server": "static-server -i src/index.html",
+    "start": "npm-run-all --parallel start:server watch"
   },
   "repository": {
     "type": "git",
     "url": "/Users/a9889589/Google Drive/Shared/Orange Robe Tours/orange-robe-tours-site-repo/orange-robe-tours-site.git/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.1.3",
+    "clean-css-cli": "^4.2.1",
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.18.4",
+    "npm-run-all": "^4.1.3",
+    "static-server": "^2.2.1"
+  }
 }
