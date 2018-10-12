@@ -9,7 +9,7 @@
     "build": "npm run css-compile",
     "watch-css": "nodemon --watch src/ --ext scss --exec \"npm run build\"",
     "watch": "npm run watch-css",
-    "start:server": "static-server -i dist/holding-page.html",
+    "start:server": "static-server -i src/index.html",
     "start": "npm-run-all --parallel start:server watch"
   },
   "repository": {
