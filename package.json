@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/main.min.css dist/main.css",
-    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/main.scss dist/main.css",
-    "build": "npm run css-compile",
-    "watch-css": "nodemon --watch src/ --ext scss --exec \"npm run build\"",
-    "watch": "npm run watch-css",
-    "start:server": "static-server -i src/index.html",
-    "start": "npm-run-all --parallel start:server watch"
+    "build": "run-s clean css-build create-dist clean-dist",
+    "clean": "rm -r dist ||:",
+    "create-dist": "mkdir -p dist && cp -R src/assets dist && cp src/index.html dist",
+    "clean-dist": "rm dist/assets/main.css dist/assets/main.css.map && mv dist/assets/main.min.css dist/assets/main.css && mv dist/assets/main.min.css.map dist/assets/main.css.map",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/main.scss src/assets/main.css",
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output src/assets/main.min.css src/assets/main.css",
+    "css-build": "run-s css-compile css-minify",
+    "css-watch": "nodemon --watch src/ --ext scss --exec \"npm run css-build\"",
+    "start:production": "npm run build && http-server dist/",
+    "start:dev": "http-server src/",
+    "start": "npm-run-all --parallel start:dev watch",
+    "watch": "npm run css-watch"
   },
   "repository": {
     "type": "git",
@@ -21,10 +26,10 @@
   "devDependencies": {
     "bootstrap": "^4.1.3",
     "clean-css-cli": "^4.2.1",
+    "http-server": "^0.11.1",
     "netlify-cli": "^2.0.0",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.4",
-    "npm-run-all": "^4.1.3",
-    "static-server": "^2.2.1"
+    "npm-run-all": "^4.1.3"
   }
 }
