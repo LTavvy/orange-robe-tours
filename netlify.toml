@@ -1,0 +1,58 @@
+[Settings]
+ID = "eb07b256-2da3-4354-874a-f6b4bc5b28ba"
+
+# Settings in the [build] context are global and are applied to all contexts unless otherwise overridden by more specific contexts.
+
+[build]
+  # This is the directory to change to before starting a build.
+  # base    = "project/"
+  # NOTE: This is where we will look for package.json/.nvmrc/etc, not root.
+  # This is the directory that you are publishing from (relative to root of your repo)
+  publish = "dist/"
+  # This will be your default build command
+  # command = "echo 'default context'"
+  # This is where we will look for your lambda functions
+  # functions = "project/functions/"
+
+# Production context: All deploys from the Production branch set in your site's deploy settings will inherit these settings.
+[context.production]
+  publish = "dist/"
+  # command = "make publish"
+  # environment = { ACCESS_TOKEN = "super secret", NODE_ENV = "8.0.1" }
+
+# Deploy Preview context: All Deploy Previews (https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/)
+# will inherit these settings.
+[context.deploy-preview]
+  publish = "dist/"
+# Here is another way to define context specific environment variables
+# [context.deploy-preview.environment]
+#   ACCESS_TOKEN = "not so secret"
+
+# Branch Deploy context: All deploys that are not resulting from a Pull/Merge Request and not from the primary, linked branch will inherit these settings.
+# [context.branch-deploy]
+#   command = "echo branch"
+# [context.branch-deploy.environment]
+#   NODE_ENV = "development"
+
+
+# Note that all redirects and headers are GLOBAL for all builds:
+# they do not get scoped to contexts no matter where you enter them in the file
+# For context-specific rules, use _headers or _redirects - those are PER-DEPLOY.
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+
+[[headers]]
+  for = "/" # This defines which paths this specific [[headers]] block will cover.
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+    Link = '''
+    </main.min.css>; rel=preload; as=style'''
+
+[[headers]]
+  for = '/assets/orange-robe-tours-project-proposal-eng.pdf'
+  [headers.values]
+    Conent-Security-Policy = "default-src https:"

@@ -1,20 +1,40 @@
 @import 'node_modules/bootstrap/scss/bootstrap-reboot';
 @import 'node_modules/bootstrap/scss/bootstrap-grid';
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+$primary-color: #ffbd4a;
+$monserrat-family: 'Montserrat', sans-serif;
+
 html {
   height: 100%;
 }
 
 body {
   background: white;
+  font-family: $monserrat-family;
 }
 
 header {
   background: blue;
 }
 
-main {
-  background: green;
+h1 {
+  text-transform: uppercase;
+  color: $primary-color;
+  font-weight: 600;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 25%;
+    top: -1rem;
+    border-bottom: 2px solid $primary-color;
+  }
+}
+
+h2 {
+  font-weight: 400;
 }
 
 .height-100 {
@@ -26,6 +46,33 @@ main {
   background: white;
 }
 
-.height-100vh:nth-child(odd) {
-  background: rgba(248, 186, 53, 0.9);
+.topper {
+  min-height: 100vh;
+
+  .container {
+    // margin-bottom: -40px;
+  }
+}
+
+.footer {
+  // min-height: 25vh;
+  background: $primary-color;
+}
+
+.cover-img__container {
+  position: relative;
+  text-align: center;
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0 1rem 1rem;
+  }
+}
+
+.cover-img {
+  max-height: 580px;
+  max-width: 100%;
+  filter: grayscale(1);
+  // margin: 0 auto -40px auto;
 }

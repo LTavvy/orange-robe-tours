@@ -1,4 +1,6 @@
 Icon?
 node_modules
 dist/
-.netrc
+yarn-error*
+yarn.lock
+.netlify
