@@ -48,9 +48,9 @@ ID = "eb07b256-2da3-4354-874a-f6b4bc5b28ba"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+    Content-Security-Policy = "default-src 'none'; script-src 'self' https://www.googletagmanager.com 'nonce-o9crONYtQ9BijkFVtg7VsA=='; connect-src 'self'; img-src 'self' https://www.google-analytics.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
     Link = '''
-    </main.min.css>; rel=preload; as=style'''
+    </assets/main.css>; rel=preload; as=style'''
 
 [[headers]]
   for = '/assets/orange-robe-tours-project-proposal-eng.pdf'
