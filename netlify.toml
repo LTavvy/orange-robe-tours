@@ -50,8 +50,7 @@ ID = "eb07b256-2da3-4354-874a-f6b4bc5b28ba"
     X-XSS-Protection = "1; mode=block"
     Content-Security-Policy = """\
                               default-src 'none';\
-                              connect-src 'self'; \
-                              connect-src https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; \
+                              connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; \
                               font-src 'self' https://fonts.gstatic.com; \
                               img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; \
                               script-src 'self' https://www.googletagmanager.com 'nonce-o9crONYtQ9BijkFVtg7VsA=='; \
