@@ -1966,10 +1966,36 @@ h2 {
   padding: 0 0 1rem 1rem;
 }
 
+.cover-img__container iframe {
+  width: 100%;
+  min-height: 315px;
+}
+
+.gogo-btn {
+  background: #E51075;
+  border: 1px solid #E51075;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+  padding: 20px 0;
+  display: block;
+}
+
+.gogo-btn:hover {
+  color: #E51075;
+  border: 1px solid #E51075;
+  background: #ffe3f0;
+  text-decoration: none;
+}
+
 .cover-img {
   max-height: 580px;
   max-width: 100%;
   filter: grayscale(1);
+}
+
+.copy-container {
+  margin-top: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
