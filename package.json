@@ -6,7 +6,7 @@
   "scripts": {
     "build": "run-s clean css-build create-dist clean-dist",
     "clean": "rm -r dist ||:",
-    "create-dist": "mkdir -p dist && cp -R src/assets dist && cp src/index.html dist",
+    "create-dist": "mkdir -p dist && cp -R src/assets dist && cp src/index.html dist && cp favicon.ico dist",
     "clean-dist": "rm dist/assets/main.css dist/assets/main.css.map dist/assets/main.min.css.map && mv dist/assets/main.min.css dist/assets/main.css",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/main.scss src/assets/main.css",
     "css-minify": "cleancss --level 1 --output src/assets/main.min.css src/assets/main.css",
