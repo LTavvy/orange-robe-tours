@@ -1,5 +1,5 @@
 [Settings]
-ID = "eb07b256-2da3-4354-874a-f6b4bc5b28ba"
+# ID = "eb07b256-2da3-4354-874a-f6b4bc5b28ba"
 
 # Settings in the [build] context are global and are applied to all contexts unless otherwise overridden by more specific contexts.
 
@@ -10,7 +10,7 @@ ID = "eb07b256-2da3-4354-874a-f6b4bc5b28ba"
   # This is the directory that you are publishing from (relative to root of your repo)
   publish = "dist/"
   # This will be your default build command
-  # command = "echo 'default context'"
+  command = "yarn build"
   # This is where we will look for your lambda functions
   # functions = "project/functions/"
 
