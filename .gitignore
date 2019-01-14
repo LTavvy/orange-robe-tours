@@ -2,7 +2,6 @@ Icon?
 node_modules
 dist/
 yarn-error*
-yarn.lock
 .netlify
 src/assets/*.css
 src/assets/*.css.map
