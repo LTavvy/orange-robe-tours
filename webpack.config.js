@@ -28,7 +28,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(svg|woff|woff2|eot|png)$/,
+        test: /\.(svg|woff|woff2|eot|png|jpg)$/,
         loader: 'file-loader',
       },
     ]
