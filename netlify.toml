@@ -1,8 +1,6 @@
 [Settings]
-# ID = "eb07b256-2da3-4354-874a-f6b4bc5b28ba"
 
 # Settings in the [build] context are global and are applied to all contexts unless otherwise overridden by more specific contexts.
-
 [build]
   publish = "dist/"
   command = "yarn build"
@@ -24,7 +22,6 @@
 # Note that all redirects and headers are GLOBAL for all builds:
 # they do not get scoped to contexts no matter where you enter them in the file
 # For context-specific rules, use _headers or _redirects - those are PER-DEPLOY.
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
