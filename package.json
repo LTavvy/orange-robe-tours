@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "run-s clean css-build create-dist clean-dist",
+    "build": "run-s clean css-build create-dist",
     "clean": "rm -r dist ||:",
     "create-dist": "mkdir -p dist && cp -R src/assets dist && cp src/index.html dist && cp favicon.ico dist",
-    "clean-dist": "rm dist/assets/main.css dist/assets/main.css.map dist/assets/main.min.css.map && mv dist/assets/main.min.css dist/assets/main.css",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/main.scss src/assets/main.css",
     "css-minify": "cleancss --level 1 --output src/assets/main.min.css src/assets/main.css",
     "css-build": "run-s css-compile css-minify",
@@ -19,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "/Users/a9889589/Google Drive/Shared/Orange Robe Tours/orange-robe-tours-site-repo/orange-robe-tours-site.git/"
+    "url": "https://github.com/tavvy/orange-robe-tours"
   },
   "author": "",
   "license": "ISC",

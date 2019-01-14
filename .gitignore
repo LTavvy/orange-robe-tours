@@ -4,4 +4,5 @@ dist/
 yarn-error*
 yarn.lock
 .netlify
-src/assets/**.css**
+src/assets/*.css
+src/assets/*.css.map
