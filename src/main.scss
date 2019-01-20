@@ -7,6 +7,7 @@ $secondary-orange: #fffedb;
 
 html {
   height: 100%;
+  background: $secondary-orange;
 }
 
 body {
@@ -20,7 +21,7 @@ h1, h2, h3, h4, .heading {
   letter-spacing: 0.15rem;
 }
 
-h1, h2, h3,.heading {
+h1, h2, h3, .heading {
   font-weight: 700;
   padding: 0.5rem 0;
   font-size: 2rem;
@@ -129,4 +130,30 @@ a:hover {
 
 .social-link--instagram {
   background-image: url('assets/insta.svg');
+}
+
+.book-cta {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.5rem;
+
+  align-self: center;
+  background: #ffffff;
+  text-decoration: none;
+  color: $primary-orange;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0 4rem 0;
+}
+
+@media(max-width: 767px) {
+  .book-cta {
+    margin: 1.5rem 0 0 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.book-cta:hover, .book-cta:focus {
+  color: #ffffff;
+  background: $primary-orange;
 }
