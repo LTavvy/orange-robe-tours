@@ -39,6 +39,7 @@
                               script-src 'self' https://www.googletagmanager.com 'nonce-o9crONYtQ9BijkFVtg7VsA=='; \
                               style-src 'self' https://fonts.googleapis.com; \
                               frame-src 'self' https://www.youtube.com \
+                              frame-src 'self' https://form.jotform.me/90283483057460 \
                               """
     Link = '''
     </assets/main.css>; rel=preload; as=style'''
