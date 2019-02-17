@@ -38,8 +38,7 @@
                               img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; \
                               script-src 'self' https://www.googletagmanager.com https://widgets.bokun.io 'nonce-o9crONYtQ9BijkFVtg7VsA=='; \
                               style-src 'self' https://fonts.googleapis.com; \
-                              frame-src 'self' https://www.youtube.com \
-                              frame-src 'self' https://form.jotform.me/90283483057460 \
+                              frame-src 'self' https://www.youtube.com https://form.jotform.me/90283483057460 https://widgets.bokun.io; \
                               """
     Link = '''
     </assets/main.css>; rel=preload; as=style'''
