@@ -14,6 +14,21 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-127384649-1');
+
+      var w41101_1294b13e_441c_4832_901a_78f1a1c70b71;
+      (function(d, t) {
+        var host = 'widgets.bokun.io';
+        var frameUrl = 'https://' + host + '/widgets/41101?bookingChannelUUID=044783ca-a9a7-4365-8a66-ccba037e2ceb&amp;activityId=115714&amp;lang=en&amp;ccy=GBP&amp;hash=w41101_1294b13e_441c_4832_901a_78f1a1c70b71';
+        var s = d.createElement(t), options = {'host': host, 'frameUrl': frameUrl, 'widgetHash':'w41101_1294b13e_441c_4832_901a_78f1a1c70b71', 'autoResize':true,'height':'','width':'100%', 'minHeight': 0,'async':true, 'ssl':true, 'affiliateTrackingCode': '', 'transientSession': true, 'cookieLifetime': 43200 };
+        s.src = 'https://' + host + '/assets/javascripts/widgets/embedder.js';
+        s.onload = s.onreadystatechange = function() {
+          var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+          try { 
+            w41101_1294b13e_441c_4832_901a_78f1a1c70b71 = new BokunWidgetEmbedder(); w41101_1294b13e_441c_4832_901a_78f1a1c70b71.initialize(options); w41101_1294b13e_441c_4832_901a_78f1a1c70b71.display();
+          } catch (e) {}
+        };
+        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+      })(document, 'script');
     </script>
 
   </head>
@@ -83,7 +98,7 @@
           <div class="container v-padding">
 
             <h3>Booking</h3>
-            <a class="book-cta" href="https://form.jotform.me/90283483057460" target="_blank"> Book Now</a>
+            <a class="book-cta" href="#booking-form"> Book Now</a>
             <p></p>
             <p>To book a tour please fill out the above online form. Alternatively come by the office (map below)
             <p class="heading">1 TOUR = 100,000kip<br />2 TOURS = 180,000kip</p>
@@ -92,7 +107,7 @@
             <p></p>
             
             <p>If you wish to pay using card, please book online via TripAdvisor/Viator</p>
-            <a class="book-cta" href="https://www.tripadvisor.com.sg/Attraction_Review-g295415-d15803844-Reviews-Orange_Robe_Tours-Luang_Prabang_Luang_Prabang_Province.html" target="_blank"> Book & Pay Online</a>
+            <a class="book-cta" href="#booking-form"> Book & Pay Online</a>
             <p></p>
             <p>*Includes online booking fee.</p>
 
@@ -122,13 +137,9 @@
 
         <div id="booking-form" class="col-12 js-form">
           <div class="mask"></div>
-          <div class="container">
-            <iframe
-              src="https://form.jotform.me/90283483057460"
-              width="100%"
-              height="100%"
-            >
-            </iframe>
+          <div class="container v-padding">
+            <h3>Book Now</h3>
+            <div id="bokun-w41101_1294b13e_441c_4832_901a_78f1a1c70b71">Loading...</div>
           </div>
         </div>
 
