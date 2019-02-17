@@ -23,7 +23,7 @@ const popupFunc = (btn, form, mask) => {
   })
 };
 
-(() => {
+const init = () => {
   document.body.classList.add('js');
   const FORM_BTN_SELECTOR = '.js-book-form';
   const FORM_SELECTOR = '.js-form';
@@ -33,4 +33,8 @@ const popupFunc = (btn, form, mask) => {
     document.querySelector(FORM_SELECTOR),
     document.querySelector(MASK_SELECTOR)
   );
+}
+
+(() => {
+  // init();
 })();
