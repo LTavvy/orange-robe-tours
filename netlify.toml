@@ -33,10 +33,10 @@
     X-XSS-Protection = "1; mode=block"
     Content-Security-Policy = """\
                               default-src 'none';\
-                              connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net  https://widgets.bokun.io; \
+                              connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://widgets.bokun.io; \
                               font-src 'self' https://fonts.gstatic.com; \
                               img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; \
-                              script-src 'self' https://www.googletagmanager.com 'nonce-o9crONYtQ9BijkFVtg7VsA=='; \
+                              script-src 'self' https://www.googletagmanager.com https://widgets.bokun.io 'nonce-o9crONYtQ9BijkFVtg7VsA=='; \
                               style-src 'self' https://fonts.googleapis.com; \
                               frame-src 'self' https://www.youtube.com \
                               frame-src 'self' https://form.jotform.me/90283483057460 \
