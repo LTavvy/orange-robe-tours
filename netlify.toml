@@ -27,6 +27,10 @@
   to= "/confirmation.html"
 
 [[redirects]]
+  from = "/"
+  to = "/index.html"
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
 
