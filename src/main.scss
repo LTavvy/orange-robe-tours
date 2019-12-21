@@ -106,7 +106,8 @@ a:hover, .link:hover {
   }
 }
 
-.title-block {
+.title-block,
+.confirmation-block {
   background-image: linear-gradient(black, black), url('./assets/main.jpg');
   background-blend-mode: saturation;
   background-size: cover;
@@ -116,10 +117,12 @@ a:hover, .link:hover {
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 2rem 0;
 
     color: $primary-orange;
     text-align: center;
+    text-shadow: 1px 1px 2px #0000009d;
 
     h1 {
       font-size: 2.5rem;
@@ -129,15 +132,37 @@ a:hover, .link:hover {
       font-size: 1.5rem;
     }
 
+    h3 {
+      font-size: 1rem;
+    }
+
     .logo {
-      max-height: 10rem;
+      max-height: 12rem;
     }
   }
 }
 
-.map-img {
+.confirmation-page {
+  height: 100%;
+  background-color: #000000;
+  .confirmation-block {
+    background-image: none;
+  }
+}
+
+.map-img,
+.img-chart {
   width: 100%;
   display: inline-block;
+}
+
+.img-chart {
+  padding: 1.5rem 0;
+}
+
+.img-ta-logo {
+  display: inline-block;
+  width: 5rem;
 }
 
 .social-link {

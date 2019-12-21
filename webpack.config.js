@@ -54,6 +54,12 @@ module.exports = {
       inject: true,
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      title: 'Orange Robe Tours',
+      template: 'src/confirmation.html',
+      inject: true,
+      filename: 'confirmation.html'
+    }),
     new CopyWebpackPlugin([{
       from: 'src/assets',
       to: 'assets'
