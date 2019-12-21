@@ -9,8 +9,8 @@
   },
   "author": "Adam Tavener",
   "scripts": {
-    "build": "yarn run clean && NODE_ENV=production yarn run webpack",
-    "clean": "rm -r dist ||:",
+    "build": "npm run clean && NODE_ENV=production webpack",
+    "clean": "rm -r dist ||: && mkdir dist",
     "start": "serve dist",
     "dev": "webpack-dev-server --config webpack.config.js --mode development"
   },

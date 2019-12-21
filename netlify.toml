@@ -23,6 +23,8 @@
 # they do not get scoped to contexts no matter where you enter them in the file
 # For context-specific rules, use _headers or _redirects - those are PER-DEPLOY.
 [[redirects]]
+  from= "/confirmation"
+  to= "/confirmation/html"
   from = "/*"
   to = "/index.html"
 
