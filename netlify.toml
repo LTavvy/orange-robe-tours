@@ -24,7 +24,7 @@
 # For context-specific rules, use _headers or _redirects - those are PER-DEPLOY.
 [[redirects]]
   from= "/confirmation"
-  to= "/confirmation/html"
+  to= "/confirmation.html"
 
 [[redirects]]
   from = "/*"
