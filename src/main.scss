@@ -270,3 +270,18 @@ a:hover, .link:hover {
     }
   }
 }
+
+.alert {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5200;
+  display: flex;
+  align-items: center;
+}
+
+.alert p {
+  width: 100%;
+  margin: 2em 0;
+  padding: 0 1em;
+}
