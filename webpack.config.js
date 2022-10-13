@@ -34,10 +34,10 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
-      {
-        test: /\.(svg|woff|woff2|eot|png|jpg)$/,
-        loader: "file-loader",
-      },
+      // {
+      //   test: /\.(svg|woff|woff2|eot|png|jpg)$/,
+      //   loader: "file-loader",
+      // },
     ],
   },
   plugins: [
