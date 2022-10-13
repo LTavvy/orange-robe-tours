@@ -5044,11 +5044,6 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typeface-montserrat@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-1.1.13.tgz#2a16729c174dd1a8c3fec05a851b7725412606cc"
-  integrity sha512-Pklkyj0e+K+6I/t0M6JBDBphpfJkF1k+3qd8qDnp9aVtCC7oGBQWTAcL6+5eArfGe7h73uPwyal73hEkf9YCUA==
-
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.0.tgz#301acdc525631670d39f6146e0e77ff6bbdebddc"

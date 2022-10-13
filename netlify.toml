@@ -42,7 +42,7 @@
     Content-Security-Policy = """\
                               default-src 'none';\
                               connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://widgets.bokun.io; \
-                              font-src 'self' https://fonts.gstatic.com; \
+                              font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; \
                               img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://www.paypalobjects.com; \
                               script-src 'self' https://www.googletagmanager.com https://widgets.bokun.io 'nonce-o9crONYtQ9BijkFVtg7VsA=='; \
                               style-src 'self' https://fonts.googleapis.com; \
