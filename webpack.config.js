@@ -1,14 +1,14 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: __dirname + '/src/index.js',
+  mode: "production",
+  entry: __dirname + "/src/index.js",
   output: {
-    path: __dirname + '/dist',
-    filename: '[name].bundle.js'
+    path: __dirname + "/dist",
+    filename: "[name].bundle.js",
   },
   module: {
     rules: [
@@ -16,69 +16,65 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader", // translates CSS into CommonJS
-          "sass-loader" // compiles Sass to CSS, using Node Sass by default
-        ]
+          "sass-loader", // compiles Sass to CSS, using Node Sass by default
+        ],
       },
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader"
-        ]
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(svg|woff|woff2|eot|png|jpg)$/,
-        loader: 'file-loader',
+        loader: "file-loader",
       },
-    ]
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
     }),
     new HtmlWebpackPlugin({
-      title: 'Orange Robe Tours',
-      template: 'src/index.html',
+      title: "Orange Robe Tours",
+      template: "src/index.html",
       inject: true,
-      filename: 'index.html'
+      filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      title: 'Orange Robe Tours',
-      template: 'src/confirmation.html',
+      title: "Orange Robe Tours",
+      template: "src/confirmation.html",
       inject: true,
-      filename: 'confirmation.html'
+      filename: "confirmation.html",
     }),
-    new CopyWebpackPlugin([{
-      from: 'src/assets',
-      to: 'assets'
-    }, {
-      from: 'src/assets/favicon.ico',
-      to: './'
-    }, {
-      from: 'src/robots.txt',
-      to: './'
-    }])
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "src/assets",
+          to: "assets",
+        },
+        {
+          from: "src/assets/favicon.ico",
+          to: "./",
+        },
+        {
+          from: "src/robots.txt",
+          to: "./",
+        },
+      ],
+    }),
   ],
   optimization: {
-    minimizer: [
-      new OptimizeCSSAssetsPlugin({}),
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: false
-      }),
-    ]
+    minimizer: [new CssMinimizerPlugin({})],
   },
-}
+};
