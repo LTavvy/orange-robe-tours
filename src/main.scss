@@ -29,7 +29,6 @@ body {
   background: white;
   font-family: $monserrat-family;
   font-weight: 300;
-  text-align: justify;
 }
 
 h1, h2, h3, h4, .heading {
@@ -42,11 +41,10 @@ h1, h2, h3, .heading {
   padding: 0.5rem 0;
   font-size: 2rem;
   line-height: 2rem;
-  text-align: left;
 }
 
 .pricing {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   letter-spacing: unset;
 }
 
