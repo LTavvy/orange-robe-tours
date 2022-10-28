@@ -45,7 +45,7 @@
                               font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; \
                               img-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net https://www.paypalobjects.com; \
                               script-src 'self' https://www.googletagmanager.com https://widgets.bokun.io https://polyfill.io 'nonce-o9crONYtQ9BijkFVtg7VsA=='; \
-                              style-src 'self' https://fonts.googleapis.com;  'nonce-sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' ; \
+                              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; ; \
                               frame-src 'self' https://www.youtube.com https://form.jotform.me/90283483057460 https://widgets.bokun.io; \
                               """
     Link = '''
