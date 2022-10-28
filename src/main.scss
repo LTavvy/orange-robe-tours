@@ -216,8 +216,8 @@ a:hover, .link:hover {
   background: #ffffff;
   text-decoration: none;
   color: $primary-orange;
-  padding: 0.5rem 1rem;
-  margin: 1.5rem 0 4rem 0;
+  padding: 0.5rem 1rem !important;
+  margin: 1.5rem 0 4rem 0 !important;
 }
 
 @media(max-width: 767px) {
