@@ -285,3 +285,10 @@ a:hover, .link:hover {
   margin: 2em 0;
   padding: 0 1em;
 }
+
+footer .stripeBox, footer .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
