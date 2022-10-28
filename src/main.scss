@@ -292,3 +292,8 @@ footer .stripeBox, footer .copyright {
     align-items: center;
     justify-content: center;
 }
+
+footer .stripeBox img {
+    width: 300px;
+    max-width: 80vw !important;
+}
