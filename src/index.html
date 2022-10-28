@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title><%= htmlWebpackPlugin.options.title %></title>
   <meta name="description" content="Authentic cultural Buddhist tours that give back, delivered exclusively by former Buddhist Novices and Monks, based in Luang Prabang, Laos.">
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src *;
   ">  
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -178,25 +178,26 @@
                     <p align="justify">While it is possible for females to join the temple as Buddhist Nuns, this is typically a role for elderly, widowed women. This isn’t something that young females tend to seek as an option. We are dedicated to equal opportunity and are always open to hiring women. We are looking for a female who has had experience inside the temple to join our team.</p>
 
                     <p align="justify">We currently have plans to routinely support a local woman’s charity and hope that once we are more established we can begin making monthly donations. For now, we are contributing to the temples that help support our tours and continually make contributions to the community in any way that we can.<p>
-                    </div>
-              </div>
+            </div>
+          </div>
             </div>
           </div>
                 <div class="mask"></div>
-                <div class="container v-padding">
-                    <div style="display: flex; flex-direction: column; justify-content:center; align-items: center;">
-                        <div style="display: flex; justify-content:center">
+                <footer class="container v-padding">
+                    <div>
+                        <div class="stripeBox" style="display: flex; justify-content:center">
                             <img src="assets/stripe.png" border="0" alt="Powered By Stripe Payments" 
                             style="width: 100%;"/>
                         </div>
-                        <div>
+                        <div class="copyright">
                             <p>Copyright © 2019-2022 Orange Robe Tours</p>
                             <p>Part of Unique Laos Travel</p>
                         </div>
                     </div>
+                </footer>
+                <!-- <div class="container v-padding">
 
-
-                  <!-- <table border="0" cellpadding="0" cellspacing="0" align="center">
+                  <table border="0" cellpadding="0" cellspacing="0" align="center">
                     <tr>
                       <td align="center"></td>
                     </tr>
@@ -212,8 +213,8 @@
                         <p>Part of Unique Laos Travel</p>
                       </td>
                     </tr>
-                  </table> -->
-                </div>
+                  </table>
+                </div> -->
               </div>
     </div>
   </main>
